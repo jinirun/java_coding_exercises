@@ -17,11 +17,11 @@ public class Exercise001 {
 
     public double addVat(double originalPrice, double vatRate) {
         // Add your code here
-        //DecimalFormat vat = new DecimalFormat("#.00");
-        //DecimalFormat total = new DecimalFo;
+        DecimalFormat df = new DecimalFormat("##.##");
         Double vat = (vatRate / 100) * originalPrice;
+        Double totalAmount = originalPrice + vat;
 
-        return Math.round(originalPrice + vat);
+        return (Double.parseDouble(df.format(totalAmount)));
     }
 
     public String reverse(String sentence) {
