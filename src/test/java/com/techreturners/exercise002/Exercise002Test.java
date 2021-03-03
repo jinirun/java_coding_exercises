@@ -19,7 +19,6 @@ public class Exercise002Test {
     }
 
     @Test
-    @Ignore
     public void checkCanWatchFilm() {
         Exercise002 ex002 = new Exercise002();
 
