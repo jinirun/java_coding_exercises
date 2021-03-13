@@ -22,17 +22,11 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
-        String revSentence = "";
-        for (int i=sentence.length()-1; i >= 0; i-- )
-            revSentence = revSentence + sentence.charAt(i);
-        return revSentence;
+        StringBuilder revSentence = new StringBuilder(sentence);
+        return revSentence.reverse().toString();
     }
 
     public int countLinuxUsers(List<User> users) {
-        int count = 0;
-        for (User countUser: users)
-            if (countUser.getType() == "Linux")
-                count++;
-        return count;
+        return (int) users.stream().filter(n -> n.getType().equals("Linux")).count();
     }
 }
